@@ -1,0 +1,10 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<import resource="classpath:dao-application-context.xml" />
+	<bean id="service" class="com.sarvatra.smui.services.ServiceImpl">
+	    <property name="securityService" ref="securityService"/>
+	</bean>
+	<bean id="securityService" class="com.sarvatra.smui.services.SecurityServiceImpl"/>
+</beans>
